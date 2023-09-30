@@ -4,6 +4,12 @@ import "./App.css";
 import Register from './pages/Register';
 import Home from './pages/Home';
 import Login from './pages/Login';
+
+import './stylesheets/alignments.css'
+import './stylesheets/sizes.css'
+import './stylesheets/form-elements.css'
+import './stylesheets/theme.css'
+import './stylesheets/custom.css'
 function App() {
   return (
     <BrowserRouter>

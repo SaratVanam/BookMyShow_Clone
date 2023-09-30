@@ -7,7 +7,9 @@ require("dotenv").config()
 const dbConfig = require("./config/dbConfig")
 const userModel = require("./models/userModel")
 const userRoute = require("./routes/userRoute");
+const cors = require("cors");
 
+app.use(cors()); // cross origin resurce sharing enabled
 app.use(express.json());
 app.use("/",userRoute);
 
