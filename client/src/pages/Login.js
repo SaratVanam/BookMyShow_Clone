@@ -7,6 +7,7 @@ import { Link,useNavigate } from "react-router-dom";
 
 
 const Login = () => {
+  const navigate= useNavigate();
   const onFinish = async ()=>{
     const response = await axios.post('http://localhost:8020/login', value, {
         headers: {'Content-Type': 'application/json'}})
@@ -14,6 +15,8 @@ const Login = () => {
         const res = response.data;
         if(res.success){
             message.success(res.message);
+            localStorage.setItem('token',res.token);
+            navigate('/')
         }
         else{
             message.error(res.message);

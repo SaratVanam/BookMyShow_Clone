@@ -45,10 +45,11 @@ router.post("/login",async (req,res)=>{
             message:"Invalid Password"
         })
     }
-
+    const token=jwt.sign({userId:user._id},process.env.secret_key_jwt,{expiresIn:"1d"})
     res.send({
         success:true,
-        message:"User successfully logged in"
+        message:"User successfully logged in",
+        token:token
     })
 })
 
