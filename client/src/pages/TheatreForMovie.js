@@ -84,7 +84,7 @@ export default function TheatreForMovie(){
               </div>
     
               <div className="mr-3">
-                <h1 className="text-md ">Select Date</h1>
+                <h1 className="text-md ">Select Show Date</h1>
                 <input
                   type="date"
                   min={moment().format("YYYY-MM-DD")}
